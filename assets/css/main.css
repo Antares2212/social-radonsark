@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background min-h-screen;
+}
+
+header {
+  @apply bg-items text-text
+}
+
+@layer components {
+  .bg-login-color {
+    @apply bg-[#2D3A4B];
+    @apply text-[#fff];
+  }
+}
