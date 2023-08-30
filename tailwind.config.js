@@ -9,6 +9,29 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
   theme: {
+    extend: {
+      animation: {
+        'timer': 'timer 10s linear',
+        'notification': 'notification 1s ease-in',
+        'notification-out': 'notification-out .6s ease-out',
+      },
+      keyframes: {
+        'notification': {
+          '0%': { transform: 'translateX(100%)' },
+          '70%': { transform: 'translateX(-10%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        'notification-out': {
+          '0%': { transform: 'translateX(0)' },
+          '30%': { transform: 'translateX(-10%)' },
+          '100%': { transform: 'translateX(110%)' },
+        },
+        'timer': {
+          '0%': { width: '100%' },
+          '100%': { width: '0' },
+        },
+      },
+    },
     screens: {
       xl: "1440px",
       lg: "1024px",
@@ -46,7 +69,6 @@ module.exports = {
       "success-500": "#04E10096",
       "success-700": "#04E100BD",
     },
-    extend: {},
   },
   plugins: [],
 }

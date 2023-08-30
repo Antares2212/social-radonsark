@@ -1,11 +1,10 @@
 <template>
   <div>
-    dsfdsf
+    ssss
   </div>
 </template>
 
 <script setup>
-
 </script>
 
 <style lang="scss" scoped>

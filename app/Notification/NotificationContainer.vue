@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed md:max-lg:bottom-4 md:max-lg:right-4 xs:bottom-4 xs:right-1 xs:left-1">
+  <div class="notificationWrapper notificationWrapper-xs">
     <div v-for="notification in store.notifications" :key="notification.id">
       <Notification 
         :id="notification.id" 
@@ -7,6 +7,7 @@
         :title="notification.title" 
         :message="notification.message" 
         :onClose="store.removeNotification" 
+        :timer="store.timer"
         />
     </div>
   </div>

@@ -1,0 +1,19 @@
+.notificationWrapper {
+  @apply absolute right-3 bottom-3 flex flex-col-reverse items-start justify-center cursor-default;
+}
+
+.notificationWrapper-xs {
+  @apply xs:max-sm:bottom-4 xs:max-sm:right-1 xs:max-sm:left-1;
+}
+
+.notificationItem {
+  @apply relative shadow-sm transition-all rounded-2xl overflow-hidden;
+}
+
+.notificationContent {
+  @apply flex items-center justify-between;
+}
+
+.notificationTimer {
+  @apply absolute animate-timer right-0 bottom-0 h-1 w-full bg-error-500 rounded-b-2xl
+}

@@ -1,18 +1,18 @@
 <template>
-  <div class="relative shadow-sm" :class="notificationClasses">
-    <div class="flex items-center justify-between">
+  <div class="notificationItem" :class="[notificationClasses, fade]">
+    <div class="notificationContent">
       <div>{{ title }}</div>
       <button class="absolute top-1 right-2" @click="close">
         <Icon class="text-xl" name="material-symbols:cancel-outline"/>
       </button>
     </div>
     <div>{{ message }}</div>
+    <NotificationTimer :closeNotification="close" :timer="timer"/>
   </div>
 </template>
 
 <script setup>
   import { useNotification } from '@/store/notification'
-
   const store = useNotification() 
   const props = defineProps({
     id: {
@@ -36,10 +36,15 @@
       type: Function,
       required: true,
       default: () => {}
+    },
+    timer: {
+      type: Number,
+      required: true,
+      default: 10000
     }
   })
 
-  const success = ["bg-success-100","border-success-500","text-success"]
+  const success = ["bg-success","border-success","text-success"]
   const error = ["bg-error","border-error","text-error"]
   const warning = ["bg-warning","border-warning","text-warning"]
   const info = ["bg-info","border-info","text-info"]
@@ -48,6 +53,12 @@
   const close = () => {
     props.onClose(props.id)
   }
+
+  const fade = ref('animate-notification')
+
+  setTimeout(() => {
+    fade.value = 'animate-notification-out'
+  }, props.timer);
 </script>
 
 <style scoped>

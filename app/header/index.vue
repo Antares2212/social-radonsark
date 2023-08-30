@@ -5,6 +5,7 @@ import { NuxtLink } from '../../.nuxt/components';
       <NuxtLink to="/">
         <div class="logo text-2xl">Радонсарк</div>
       </NuxtLink>
+      {{ name }}
       <div class="flex justify-between w-48">
         <NuxtLink class="flex items-center justify-between" to="/auth/login">
           Войти 
@@ -20,7 +21,16 @@ import { NuxtLink } from '../../.nuxt/components';
 </template>
 
 <script setup>
-
+  const props = defineProps({
+    link: {
+      type: String,
+      default: null
+    },
+    name: {
+      type: String,
+      default: ''
+    }
+  })
 </script>
 
 <style lang="scss" scoped>

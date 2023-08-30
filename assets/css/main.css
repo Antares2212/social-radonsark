@@ -1,9 +1,13 @@
+@import "base/auth.css";
+
+@import "utilities/notification.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  @apply bg-background min-h-screen;
+  @apply bg-background min-h-screen overflow-hidden;
 }
 
 header {

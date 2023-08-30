@@ -1,7 +1,7 @@
 <template>
-  <div class="lg:container flex justify-center items-center h-screen mx-auto">
-    <VeeForm class="flex flex-col items-center justify-between mx-auto p-4 bg-items max-w-md w-full rounded-xl" @submit="onSubmit">
-      <div class="text-center text-2xl text-text font-medium">Регистрация</div>
+  <div class="auth">
+    <VeeForm class="auth-form" @submit="onSubmit">
+      <div class="auth-btn">Регистрация</div>
       <AppInput 
         :name="'name'" 
         :rules="'required|name'" 

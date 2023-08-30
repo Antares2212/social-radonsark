@@ -1,0 +1,11 @@
+.auth {
+  @apply lg:container flex justify-center items-center h-screen mx-auto
+}
+
+.auth-form {
+  @apply flex flex-col items-center justify-between mx-auto p-4 bg-items max-w-md w-full rounded-xl
+}
+
+.auth-btn {
+  @apply text-center text-2xl text-text font-medium
+}
