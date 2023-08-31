@@ -3,10 +3,10 @@
     <VeeForm class="auth-form" @submit="onSubmit">
       <div class="auth-btn">Регистрация</div>
       <AppInput 
-        :name="'name'" 
+        :name="'username'" 
         :rules="'required|name'" 
         :label="'Логин:'"
-        :id="'name'"
+        :id="'username'"
         :placeholder="'Введите логин...'"/>
 
       <AppInput 
@@ -33,11 +33,15 @@
     layout: 'auth'
   })
 
+  import { useProfile } from '@/store/profile'
+
+  const profile = useProfile()
+
   const onSubmit = (val) => {
-    console.log(val);
+    profile.registration(val)
   }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

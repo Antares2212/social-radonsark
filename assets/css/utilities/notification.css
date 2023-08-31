@@ -7,7 +7,7 @@
 }
 
 .notificationItem {
-  @apply relative shadow-sm transition-all rounded-2xl overflow-hidden;
+  @apply relative shadow-sm transition-all rounded-2xl overflow-hidden w-80;
 }
 
 .notificationContent {

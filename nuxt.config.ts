@@ -34,7 +34,8 @@ export default defineNuxtConfig({
   ],
   components: [
     { path: '~/app/UI', pathPrefix: false },
-    { path: '~/app/Notification', pathPrefix: false }
+    { path: '~/app/Notification', pathPrefix: false },
+    { path: '~/components/profile'}
   ],
   pinia: {
     autoImports: [
@@ -43,4 +44,7 @@ export default defineNuxtConfig({
       ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
     ],
   },
+  runtimeConfig: {
+    baseURL: process.env.BASE_URL
+  }
 })

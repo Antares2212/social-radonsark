@@ -1,9 +1,9 @@
 <template>
   <div class="bg-gray-100">
-    <Header :name="data.profile.username"/>
+    <Header />
     <div class="flex">
-      <Sidebar />
-      <div class="lg:container py-6 mx-auto">
+      <Sidebar :name="data.profile.username"/>
+      <div class="lg:container py-6 pl-40 mx-auto">
         <slot />
       </div>
     </div>

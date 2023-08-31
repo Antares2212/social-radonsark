@@ -20,11 +20,21 @@ const handleResponse = async (response) => {
 }
 
 // Функция обработки запросов к API
-export const request = async (url, options = {}, onLoading = function(){}) => {
+export const request = async (url, type, data = {}, onLoading = function(){}) => {
   onLoading && onLoading(true)
+  const token = localStorage.getItem('Token') 
+  const header = type == ('GET' || 'DELETE') ? {
+    method: type,
+    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+    
+  } : {
+    method: type,
+    body: JSON.stringify(data),
+    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+  }
 
   try {
-    const response = await fetch(`${BASE_URL}${url}`, options)
+    const response = await fetch(`${BASE_URL}${url}`, header)
     return handleResponse(response)
   } catch (error) {
     console.error(error)

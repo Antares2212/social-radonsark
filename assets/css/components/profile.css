@@ -1,0 +1,43 @@
+.profileHeader {
+  @apply flex justify-between gap-5 mb-8
+}
+
+.profileImg {
+  @apply w-1/6 w-32 h-32
+}
+
+.profileInfo {
+  @apply w-5/6 flex flex-col gap-3
+}
+
+.profileName {
+  @apply font-medium text-2xl
+}
+
+.profileSide {
+  @apply w-4/12 flex flex-col gap-6
+}
+
+.profileContent {
+  @apply flex
+}
+
+ /* **************** */
+
+.profilePopular {
+  @apply flex flex-col
+}
+
+.profileTitle {
+  @apply flex items-center bg-text-2 bg-opacity-20 p-3 rounded-t-2xl font-medium text-text
+}
+
+.profileStatistic {
+  @apply flex flex-col text-text
+}
+
+.profileStatisticItem {
+  @apply p-3 bg-items flex justify-between items-center
+}
+
+/* **************** */

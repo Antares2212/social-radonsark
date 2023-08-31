@@ -42,6 +42,7 @@ module.exports = {
     colors: {
       // Main Colors
       "text": "#FFFFFF",
+      "text-2": "#4f4f4f",
       "buttons": "#E27D60",
       "items": "#41B3A3",
       "background": "#85CDCA",

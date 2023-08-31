@@ -1,5 +1,7 @@
 @import "base/auth.css";
 
+@import "components/profile.css";
+
 @import "utilities/notification.css";
 
 @tailwind base;
@@ -7,7 +9,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-background min-h-screen overflow-hidden;
+  @apply bg-background min-h-screen overflow-x-hidden;
 }
 
 header {
