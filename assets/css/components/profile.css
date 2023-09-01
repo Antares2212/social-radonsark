@@ -41,3 +41,7 @@
 }
 
 /* **************** */
+
+.profileSkillList {
+  @apply bg-items flex flex-wrap justify-around gap-2 px-1 py-4
+}

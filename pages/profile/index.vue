@@ -1,4 +1,4 @@
-import ProfileHeader from 'components/profile/ProfileHeader.vue';
+
 <template>
   <div class="profile">
     <ProfileHeader :profile="profile.profile"/>
@@ -10,9 +10,7 @@ import ProfileHeader from 'components/profile/ProfileHeader.vue';
       </div>
       <div class="profileMain">
         <div class="profileTabs">
-          <div class="profileTabsItem">
-  
-          </div>
+          <TabsContent :tabs="tabs" />
         </div>
         <div class="profileNews">
           <div class="profilePost">
@@ -26,8 +24,16 @@ import ProfileHeader from 'components/profile/ProfileHeader.vue';
 
 <script setup>
   import { useProfile } from '@/store/profile'
+  import TabsContent from '@/components/TabsContent'
+  import ProfileAbout from '@/components/profile/ProfileAbout'
 
   const profile = useProfile()
+
+  const tabs = [
+    { name: 'Вкладка 1' },
+    { name: 'Вкладка 2' },
+    { name: 'Вкладка 3' },
+  ]
 
 </script>
 

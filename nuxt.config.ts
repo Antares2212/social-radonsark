@@ -35,7 +35,7 @@ export default defineNuxtConfig({
   components: [
     { path: '~/app/UI', pathPrefix: false },
     { path: '~/app/Notification', pathPrefix: false },
-    { path: '~/components/profile'}
+    { path: '~/components/profile', pathPrefix: false}
   ],
   pinia: {
     autoImports: [
